@@ -9,14 +9,14 @@ class MyApp extends StatelessWidget {
         title: "test",
         home: Scaffold(
             appBar: AppBar(title: Center(child: Text("主页"))),
-            body: Center(child:FirstA("我传递进来了!"))
+            body: Center(child:FirstA(name:"我传递eee进来了!"))
         )
     );
   }
 }
 class FirstA extends StatelessWidget{
   final String name;
-  FirstA(this.name);
+  FirstA({this.name});
   @override
   Widget build(BuildContext context) {
     return new Container(
