@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
         title: "test",
         home: Scaffold(
             appBar: AppBar(title: Center(child: Text("主页"))),
-            body: Center(child:FirstA(name:"我传递eee进12321321321321来了!"))
+            body: Center(child:FirstA(name:"我传递eee进1232131321来了!"))
         )
     );
   }
