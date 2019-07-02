@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class First extends StatelessWidget{
+class FirstA extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new Container(
