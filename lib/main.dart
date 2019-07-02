@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portal/component/new/first.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -11,16 +12,6 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(title: Center(child: Text("主页"))),
             body: Center(child:FirstA(name:"我传递eee进来了!"))
         )
-    );
-  }
-}
-class FirstA extends StatelessWidget{
-  final String name;
-  FirstA({this.name});
-  @override
-  Widget build(BuildContext context) {
-    return new Container(
-        child:Text(name)
     );
   }
 }
