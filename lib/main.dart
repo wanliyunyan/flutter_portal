@@ -3,7 +3,7 @@ import 'package:flutter_portal/component/new/first.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application. aa
+  // This widget is the root of your application. aa a
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
