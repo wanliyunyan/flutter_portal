@@ -55,7 +55,7 @@ class BottomNavigationWidgetState extends State<BottomNavigationWidget> {
                   Icons.business,
                 ),
                 title: new Text(
-                  '商业',
+                  '资讯',
                 )),
             BottomNavigationBarItem(
                 icon: Icon(
