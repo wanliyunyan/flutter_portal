@@ -82,4 +82,8 @@ build/
 /ios/Runner/GeneratedPluginRegistrant.m
 /ios/Runner/GeneratedPluginRegistrant.h
 
+<<<<<<< .merge_file_a03816
 /android/local.properties
+=======
+/pubspec.lock
+>>>>>>> .merge_file_a16412
