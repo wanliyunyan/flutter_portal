@@ -30,7 +30,7 @@ class BottomNavigationWidgetState extends State<BottomNavigationWidget> {
     Text getTabTitle(int curIndex) {
       var color;
       if (curIndex == _currentIndex) {
-        color = Colors.green;
+        color = Colors.blueAccent;
       } else {
         color = Colors.black;
       }
