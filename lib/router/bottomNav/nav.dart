@@ -24,14 +24,24 @@ class BottomNavigationWidget extends StatefulWidget {
 
 class BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   int _currentIndex = 0;
-
+  var appBarTitles = ['测试', '首页', '资讯', '我的']; // tabbar显示的文字
   @override
   Widget build(BuildContext context) {
+    Text getTabTitle(int curIndex) {
+      var color;
+      if (curIndex == _currentIndex) {
+        color = Colors.green;
+      } else {
+        color = Colors.black;
+      }
+      return new Text(appBarTitles[curIndex],
+          style: new TextStyle(fontSize: 14.0, color: color));
+    }
     /*
     返回一个脚手架，里面包含两个属性，一个是底部导航栏，另一个就是主体内容
      */
     return new Scaffold(
-        appBar: AppBar(title: Center(child: Text("主页"))),
+        appBar: AppBar(title: Center(child: Text(appBarTitles[_currentIndex]))),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           //底部导航栏的创建需要对应的功能标签作为子项，这里我就写了3个，每个子项包含一个图标和一个title。
@@ -40,30 +50,26 @@ class BottomNavigationWidgetState extends State<BottomNavigationWidget> {
                 icon: Icon(
                   Icons.wb_iridescent,
                 ),
-                title: new Text(
-                  '测试',
-                )),
+                title: getTabTitle(0)
+            ),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
                 ),
-                title: new Text(
-                  '首页',
-                )),
+                title: getTabTitle(1)
+            ),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.business,
                 ),
-                title: new Text(
-                  '资讯',
-                )),
+                title:getTabTitle(2)
+            ),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.mood,
                 ),
-                title: new Text(
-                  '我的',
-                )),
+                title: getTabTitle(3)
+            ),
           ],
           //这是底部导航栏自带的位标属性，表示底部导航栏当前处于哪个导航标签。给他一个初始值0，也就是默认第一个标签页面。
           currentIndex: _currentIndex,
@@ -75,6 +81,8 @@ class BottomNavigationWidgetState extends State<BottomNavigationWidget> {
             });
           },
         ),
+
         body: pages[_currentIndex]);
   }
 }
+
