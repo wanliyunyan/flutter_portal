@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portal/router/pageOne/index.dart';
-import 'package:flutter_portal/router/pageTwo/index.dart';
-import 'package:flutter_portal/router/pageThree/index.dart';
-import 'package:flutter_portal/router/pageFour/index.dart';
+import '../pageOne/index.dart';
+import '../pageTwo/index.dart';
+import '../pageThree/index.dart';
+import '../pageFour/index.dart';
 
 List<Widget> pages = new List();
 //initState是初始化函数，在绘制底部导航控件的时候就把这3个页面添加到list里面用于下面跟随标签导航进行切换显示
