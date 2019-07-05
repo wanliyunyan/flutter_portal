@@ -9,7 +9,17 @@ class OneWidget extends StatefulWidget {
   }
 }
 
+
 class One extends State<OneWidget> {
+
+  int _counter = 0;
+
+  void _increment() {
+    setState(() {
+      _counter++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final appState = Provider.of<Counter>(context);
@@ -32,12 +42,12 @@ class One extends State<OneWidget> {
       ),
       //body占屏幕的大部分
       body: new Center(
-        child: new Text('我也来学习布局!${appState.getText}'),
+        child: new Text(_counter.toString()),
       ),
       floatingActionButton: new FloatingActionButton(
         tooltip: 'Add', // used by assistive technologies
         child: new Icon(Icons.add),
-        onPressed: null,
+        onPressed: _increment,
       ),
     );
   }
