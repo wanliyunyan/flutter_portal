@@ -1,22 +1,41 @@
 import 'package:flutter/material.dart';
+import 'index2.dart';
 
 class OneWidget extends StatefulWidget{
-  @override
+@override
   State<StatefulWidget> createState() {
     return new One();
   }
 }
 
 class One extends State<OneWidget>{
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('首页'),
-      ),
-      body: new Center(
-        child: Icon(Icons.home,size: 130.0,color: Colors.blue,),
-      ),
+      body: 
+        Center(
+         child:(
+            MaterialButton(
+                child:(
+                  Icon(Icons.add,size:64.0,color: Colors.red)
+                ),
+                onPressed: (){
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder:(
+                          BuildContext context
+                        ){
+                          return OneTwo();
+                        }
+                      )
+                    );
+                },
+              )
+         ) 
+        )
+      
+       
     );
   }
 }

@@ -6,6 +6,7 @@ import 'package:flutter_portal/router/pageFour/index.dart';
 
 List<Widget> pages = new List();
 //initState是初始化函数，在绘制底部导航控件的时候就把这3个页面添加到list里面用于下面跟随标签导航进行切换显示
+
 void initState() {
   pages
     ..add(OneWidget())
@@ -24,7 +25,6 @@ class BottomNavigationWidget extends StatefulWidget {
 
 class BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   int _currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     /*
